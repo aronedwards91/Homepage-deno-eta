@@ -1,2 +1,3 @@
 <% layout("../layout") %>
-<h1>--Test-- <%= it.title %></h1>
+<%~ include("../partials/title", { title: "Home" }) %>
+<h1>--Test--</h1>

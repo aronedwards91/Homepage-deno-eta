@@ -1,21 +1,31 @@
 <!doctype html>
 
-<html lang=en>
-
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="#333333" name="theme-color">
-    <link rel="stylesheet" href="./index.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#333333" name="theme-color" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./pages.css" />
   </head>
 
-  <body>
-    <picture>
-      <source media="(max-width: 599)" srcset="./assets/Mountain_view_in_Robson_valley_mob.webp">
-      <source media="(min-width: 600)" srcset="./assets/Mountain_view_in_Robson_valley.webp">
-      <img alt="background" class="background-img" src="./assets/Mountain_view_in_Robson_valley.webp">
-    </picture>
+  <picture>
+    <source
+      media="(max-width: 599)"
+      srcset="./assets/Mountain_view_in_Robson_valley_mob.webp"
+    />
+    <source
+      media="(min-width: 600)"
+      srcset="./assets/Mountain_view_in_Robson_valley.webp"
+    />
+    <img
+      alt="background"
+      class="background-img"
+      src="./assets/Mountain_view_in_Robson_valley.webp"
+    />
+  </picture>
 
+  <body>
     <header>
       <nav>
         <ul class="active-<%= it.slug %>">
@@ -30,7 +40,9 @@
     </header>
 
     <main>
-      <%~ it.body %>
+      <article><%~ it.body %></article>
+
+      <footer>© Aron Edwards 2026</footer>
     </main>
-  <body>
+  </body>
 </html>

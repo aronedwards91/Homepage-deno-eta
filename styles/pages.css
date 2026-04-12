@@ -1,0 +1,22 @@
+/* PAGE */
+#page-title {
+  max-width: 56em;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2em;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+#page-title h2 {
+  font-weight: normal;
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 1100px) {
+  #page-title {
+    padding: 3em;
+  }
+  #page-title h2 {
+    font-size: 3em;
+  }
+}
