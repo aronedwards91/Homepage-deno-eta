@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang=en>
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="#333333" name="theme-color">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <picture>
+      <source media="(max-width: 599)" srcset="./assets/Mountain_view_in_Robson_valley_mob.webp">
+      <source media="(min-width: 600)" srcset="./assets/Mountain_view_in_Robson_valley.webp">
+      <img alt="background" class="background-img" src="./assets/Mountain_view_in_Robson_valley.webp">
+    </picture>
+
+    <header>
+      <nav>
+        <ul class="bg-white-soft">
+          <li><a href="/">Home</a></li>
+          <li><a href="/books">My Library</a></li>
+          <li><a href="/quotations">Favoured Quotations</a></li>
+          <li><a href="/projects">My Projects</a></li>
+          <li><a href="/career">Career</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <%~ it.body %>
+    </main>
+  <body>
+</html>
