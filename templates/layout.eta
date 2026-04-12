@@ -18,13 +18,13 @@
 
     <header>
       <nav>
-        <ul class="bg-white-soft">
-          <li><a href="/">Home</a></li>
-          <li><a href="/books">My Library</a></li>
-          <li><a href="/quotations">Favoured Quotations</a></li>
-          <li><a href="/projects">My Projects</a></li>
-          <li><a href="/career">Career</a></li>
-          <li><a href="/blog">Blog</a></li>
+        <ul class="active-<%= it.slug %>">
+          <li><a href="./">Home</a></li>
+          <li><a href="./books">My Library</a></li>
+          <li><a href="./quotations">Favourite Quotes</a></li>
+          <li><a href="./projects">My Projects</a></li>
+          <li><a href="./career">Career</a></li>
+          <li><a href="./blog">Blog</a></li>
         </ul>
       </nav>
     </header>

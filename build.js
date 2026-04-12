@@ -1,22 +1,31 @@
 import { Eta } from "@bgub/eta";
 
 const viewpath = `${Deno.cwd()}/templates/`;
+
 const eta = new Eta({ views: viewpath, cache: true });
-
-const Home = eta.render("index", { title: "that's my title" });
-
-Deno.writeTextFileSync("dist/index.html", Home);
-
-// Copy all files from styles/ to dist/ using Deno APIs
 
 // Ensure dist/ directory exists
 try {
   await Deno.mkdir("dist", { recursive: true });
   await Deno.mkdir("dist/assets", { recursive: true });
 } catch (e) {
+  console.error(e);
   // directory already exists, skip
 }
 
+// generate a page for each template in templates/pages/
+for await (const entry of Deno.readDir("templates/pages")) {
+  if (entry.isFile) {
+    const templateSlug = entry.name.replace(".eta", "");
+    const page = eta.render(`pages/${templateSlug}`, { slug: templateSlug });
+    const destPath = `dist/${templateSlug}.html`;
+
+    Deno.writeTextFileSync(destPath, page);
+  }
+}
+
+
+// Copy all files from styles/ to dist/
 for await (const entry of Deno.readDir("styles")) {
   if (entry.isFile) {
     const sourcePath = `styles/${entry.name}`;

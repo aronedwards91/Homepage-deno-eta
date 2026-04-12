@@ -1,2 +1,0 @@
-<% layout("./layout") %>
-<h1>--Test-- <%= it.title %></h1>
