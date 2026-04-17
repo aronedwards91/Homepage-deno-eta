@@ -1,4 +1,5 @@
 import { Eta } from "@bgub/eta";
+import getMarkdownData from "./markdown-to-html.js";
 
 const viewpath = `${Deno.cwd()}/templates/`;
 
@@ -17,7 +18,7 @@ try {
 for await (const entry of Deno.readDir("templates/pages")) {
   if (entry.isFile) {
     const templateSlug = entry.name.replace(".eta", "");
-    const page = eta.render(`pages/${templateSlug}`, { slug: templateSlug });
+    const page = eta.render(`pages/${templateSlug}`, { slug: templateSlug, markdownData: getMarkdownData() });
     const destPath = `dist/${templateSlug}.html`;
 
     Deno.writeTextFileSync(destPath, page);

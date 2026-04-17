@@ -1,3 +1,8 @@
 <% layout("../layout") %>
 <%~ include("../partials/title", { title: "Home" }) %>
-<h1>--Test--</h1>
+
+<div class="content-container">
+    <div class="prose">
+        <%~ include("../partials/markdown", { markdownFile: "home.md" }) %>
+    </div>
+</div>

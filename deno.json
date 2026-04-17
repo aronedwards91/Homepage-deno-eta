@@ -5,6 +5,7 @@
   },
   "imports": {
     "@bgub/eta": "jsr:@bgub/eta@^4.5.1",
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "marked": "npm:marked@^18.0.1"
   }
 }

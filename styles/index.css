@@ -1,7 +1,9 @@
 :root {
   --highlight-blue: rgb(126 163 220 / 80%);
-  --stronger-blue: rgba(184, 210, 250, 0.5);
-  --soft-blue: rgba(184, 210, 250, 0.4);
+  --stronger-blue:  rgba(184, 210, 250, 0.5);
+  --soft-blue:      rgba(184, 210, 250, 0.4);
+  --white-soft:     rgba(255, 255, 255, 0.3);
+  --soft-text:      rgb(22, 31, 59);
 }
 
 @font-face {
@@ -115,24 +117,26 @@ a.current {
     width: 15rem;
     padding: 0;
     backdrop-filter: blur(5px);
-  }
 
-  ul {
-    flex-direction: column;
-    margin: 0;
-    border-top: 0.4rem solid var(--stronger-blue);
-    border-bottom: 0.4rem solid var(--stronger-blue);
-    background: var(--soft-blue);
-  }
-
-  li {
-    margin: 0;
-    background: none;
-  }
-
-  a {
-    font-size: 1.6rem;
-    padding: 0.8rem 1.5rem;
+      ul {
+        flex-direction: column;
+        margin: 0;
+        border-top: 0.4rem solid var(--stronger-blue);
+        border-bottom: 0.4rem solid var(--stronger-blue);
+        background: var(--white-soft);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+      }
+    
+      li {
+        margin: 0;
+        background: none;
+      }
+    
+      a {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.5rem;
+      }
   }
 }
 

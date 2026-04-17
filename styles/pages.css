@@ -20,3 +20,53 @@
     font-size: 3em;
   }
 }
+
+.content-container {
+  background: var(--white-soft);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  min-width: 240px;
+  padding: 1rem;
+  margin: 0 2rem;
+  width: max-content;
+}
+@media only screen and (min-width: 1100px) {
+  .content-container {
+    padding: 2rem;
+    margin: 0 4rem;
+  }
+}
+
+.prose {
+  color: var(--soft-text);
+  max-width: 65ch;
+  margin: 0 auto;
+  
+  h1 {
+    font-size: 3em;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 2em;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  /* Bold links */
+  h6 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 0 0.5em;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
