@@ -1,0 +1,8 @@
+<% layout("../layout") %>
+<%~ include("../partials/title", { title: "Personal Projects" }) %>
+
+<div class="content-container">
+    <div class="prose">
+        <%~ include("../partials/markdown", { markdownFile: "projects.md" }) %>
+    </div>
+</div>
