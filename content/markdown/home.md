@@ -6,6 +6,5 @@ I'm currently working at BGC as a frontend developer, and in my spare time I foc
 
 Please poke around my curated collection of things I've found, enjoyed and want to share.
 
-
-###### [Github](https://github.com/aronedwards91)
+<a href="https://github.com/aronedwards91" class="large-link">Github</a>
 
