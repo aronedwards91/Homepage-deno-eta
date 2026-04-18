@@ -30,12 +30,12 @@
     <header>
       <nav>
         <ul class="active-<%= it.slug %>">
-          <li><a href="./">Home</a></li>
-          <li><a href="./books">My Library</a></li>
-          <li><a href="./quotations">Favourite Quotes</a></li>
-          <li><a href="./projects">My Projects</a></li>
-          <li><a href="./career">Career</a></li>
-          <li><a href="./blog">Blog</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./books.html">My Library</a></li>
+          <li><a href="./quotations.html">Favourite Quotes</a></li>
+          <li><a href="./projects.html">My Projects</a></li>
+          <li><a href="./career.html">Career</a></li>
+          <li><a href="./blog.html">Blog</a></li>
         </ul>
       </nav>
     </header>
