@@ -1,0 +1,59 @@
+<% layout("../layout") %>
+<%~ include("../partials/title", { title: "Favourite Quotes" }) %>
+
+<div class="content-container">
+    <p><i>“Make your own Bible. Select and collect all the words and sentences that in all”</i></p>
+    <p><i>“your readings have been to you like the blast of a trumpet.”</i></p>
+    <p>Ralph Waldo Emerson</p>
+    <div class="prose quotes-list"">
+
+        <h3>Philosophers</h3>
+        
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-philosophers.md"] }) %>
+
+        <h3>Ancients</h3>
+
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-ancients.md"] }) %>
+
+        <h3>Comedians</h3>
+        
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-comedians.md"] }) %>
+
+        <h3>Scientists</h3>
+
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-scientists.md"] }) %>
+
+        <h3>Cultural Figures</h3>
+
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-cultural-figures.md"] }) %>
+
+        <h3>Economists</h3>
+        
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-economists.md"] }) %>
+
+        <h3>Writers</h3>
+        
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-writers.md"] }) %>
+
+        <h3>Proverbs</h3>
+        
+        <%~ include("../partials/collapsable", 
+        { title: "Quotes", 
+          body: it.markdownData["quote-proverbs.md"] }) %>
+
+    </div>
+</div>
