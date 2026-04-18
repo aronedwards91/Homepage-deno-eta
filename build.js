@@ -18,13 +18,15 @@ try {
 for await (const entry of Deno.readDir("templates/pages")) {
   if (entry.isFile) {
     const templateSlug = entry.name.replace(".eta", "");
-    const page = eta.render(`pages/${templateSlug}`, { slug: templateSlug, markdownData: getMarkdownData() });
+    const page = eta.render(`pages/${templateSlug}`, {
+      slug: templateSlug,
+      markdownData: getMarkdownData(),
+    });
     const destPath = `dist/${templateSlug}.html`;
 
     Deno.writeTextFileSync(destPath, page);
   }
 }
-
 
 // Copy all files from styles/ to dist/
 for await (const entry of Deno.readDir("styles")) {
@@ -41,5 +43,19 @@ for await (const entry of Deno.readDir("assets")) {
     const sourcePath = `assets/${entry.name}`;
     const destPath = `dist/assets/${entry.name}`;
     await Deno.copyFile(sourcePath, destPath);
+  }
+
+  if (entry.isDirectory) {
+    const sourceDirPath = `assets/${entry.name}`;
+    const destDirPath = `dist/assets/${entry.name}`;
+    await Deno.mkdir(destDirPath, { recursive: true });
+
+    for await (const file of Deno.readDir(sourceDirPath)) {
+      if (file.isFile) {
+        const sourceFilePath = `${sourceDirPath}/${file.name}`;
+        const destFilePath = `${destDirPath}/${file.name}`;
+        await Deno.copyFile(sourceFilePath, destFilePath);
+      }
+    }
   }
 }

@@ -64,7 +64,7 @@ nav {
   padding: 0 1rem;
 }
 
-ul {
+nav ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -75,22 +75,22 @@ ul {
   border: none;
 }
 
-li {
+nav li {
   display: block;
   float: left;
   position: relative;
   transition: background 0.3s ease-in-out;
   margin: 0.4rem;
 }
-li:hover {
+nav li:hover {
   background: var(--stronger-blue);
 }
 /* TODO */
-li.current {
+nav li.current {
   border: 1px solid var(--stronger-blue);
 }
 
-a {
+nav a {
   text-decoration: none;
   font-size: 1.2rem;
   color: black;
@@ -98,7 +98,7 @@ a {
   display: block;
 }
 /* TODO */
-a.current {
+nav a.current {
   background: var(--stronger-blue);
 }
 

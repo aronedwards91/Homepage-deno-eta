@@ -1,4 +1,45 @@
 <% layout("../layout") %>
 <%~ include("../partials/title", { title: "My Library" }) %>
 
-<h1>BOOKS</h1>
+<div class="content-container">
+    <div class="prose books-list">
+        <h2>Some bookes I've found particularly interesting</h2>
+
+        <h3>Science Fiction</h3>
+        
+        <%~ include("../partials/book", { 
+            title: "Rama Series", 
+            author: "Arthur C. Clarke", 
+            image: "assets/books/rama.webp", 
+            description: "A classic science fiction series about humanities first interactions with extraterrestrial life. Books consist of four parts: Rendezvous with Rama, Rama II, The Garden of Rama & Rama Revealed (with 2 later additions by Gentry Lee).",
+        }) %>
+
+        <h3>History</h3>
+
+        <%~ include("../partials/book", { 
+            title: "A History of Britain and the British People", 
+            author: "Arthur Bryant", 
+            image: "assets/books/bryant.webp", 
+            description: "A immersive and powerful history full of strange and dangerous moments, written with a engrossing flair for the dramatic.",
+        }) %>
+
+        <h3>Non-Fiction</h3>
+        
+        <%~ include("../partials/book", { 
+            title: "The Charisma Myth", 
+            author: "Olivia Fox Cabane", 
+            image: "assets/books/charisma-myth.webp", 
+            description: "The book argues that Charisma is a skill & reflection of mood, rather than a trait of personality.",
+            markdownFile: "book-charisma-myth.md"
+        }) %>
+
+        <%~ include("../partials/book", { 
+            title: "7 Habits of Highly Effective People", 
+            author: "Stephen R. Covey", 
+            image: "assets/books/7-habits.webp", 
+            description: "A classic of the self-development genre, written in 1989 and still relevant today.",
+            markdownFile: "book-7-habits.md"
+        }) %>
+    </div>
+</div>
+

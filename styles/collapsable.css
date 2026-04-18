@@ -1,0 +1,36 @@
+.collapsible {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsible > label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: var(--soft-blue);
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 0.5rem;
+    border-top: 1px solid var(--highlight-blue);
+    transition: background-color 0.3s ease-in-out;
+}
+.collapsible > label:hover {
+    background-color: var(--highlight-blue);
+}
+
+.collapsible label span {
+    flex: 1;
+    width: 100%;
+    text-align: left;
+}
+
+.collapsible > label input {
+    display: none;
+}
+
+.collapsible > label div {
+    display: none;
+}
+
+.collapsible > label input:checked ~ div {
+    display: block;
+}

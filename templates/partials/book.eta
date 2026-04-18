@@ -1,0 +1,14 @@
+<div class="book">
+    <div class="book-cover">
+        <img src="./<%= it.image %>" alt="<%= it.title %>">
+    </div>
+    <div class="book-details">
+        <h3><%= it.title %></h3>
+        <p><b><%= it.author %></b></p>
+        <p><%= it.description %></p>
+
+        <% if (it.markdownFile) { %>
+            <%~ include("../partials/collapsable", { title: "Personal Notes", body: it.markdownData[it.markdownFile] }) %>
+        <% } %>
+    </div>
+</div>

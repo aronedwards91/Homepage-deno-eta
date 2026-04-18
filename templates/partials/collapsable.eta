@@ -1,0 +1,9 @@
+<div class="collapsible">
+    <label>
+        <span><%= it.title %></span>
+        <input type="checkbox" />
+        <div>
+            <%~ it.body %>
+        </div>
+    </label>
+</div>
